@@ -34,6 +34,24 @@
     <script>
       // add javascript here
 
+      document.querySelector('button').addEventListener('click', generateTable);
+      var table;
+      function generateTable(){
+        var rows = document.querySelector('#Rows').value;
+        var cols = document.querySelector('#Columns').value;
+        console.log(rows);
+        table = '<thead>Table Head</thead>';
+        for(var r = 0; r < rows;r++)
+        {
+          table += '<tr>'
+           for (var c = 0;c < cols;c++)
+           {
+            table += '<td>' + "Hello" + '</td>';
+           }
+          table += '</tr>'
+        }
+        document.getElementById('Container').innerHTML = '<table>' + table + '</table>';
+      }
     </script>
   </body>
 </html>
